@@ -1,9 +1,10 @@
 const express = require("express");
 const serverless = require("serverless-http");
-
+const cors = require("cors");
 const app = express();
 const Router = express.Router();
 
+app.use(cors());
 Router.get('/banners', (req, res, next) => {
   const bannerArray = [
     {
